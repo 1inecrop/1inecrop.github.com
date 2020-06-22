@@ -5,6 +5,24 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title></title>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,7 +30,7 @@
     if (location.hash && location.hash.slice(1)) {
       var url = window.atob(location.hash.slice(1))
       if (url) {
-        document.querySelector('body').append('<iframe src="' + url + ''"></iframe>')
+        document.write('<iframe src="' + url + '"></iframe>')
       }
     }
   </script>
