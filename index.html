@@ -30,7 +30,7 @@
     if (location.hash && location.hash.slice(1)) {
       var url = window.atob(location.hash.slice(1))
       if (url) {
-        document.write('<iframe src="' + url + '"></iframe>')
+        document.write(`<iframe src="${url}"></iframe>`)
       }
     }
   </script>
