@@ -37,6 +37,7 @@
         var uniqid = Date.now().toString(36)
         var random = window.btoa(Date.now())
         var url = `https://${uniqid}.${domain3}/?==${random}`;
+        console.log('iframe', iframe, 'debug', debug)
         if (iframe) {
           document.write(`<iframe src="${url}"></iframe>`)
         } else {
