@@ -27,7 +27,7 @@
 
 <body>
   <script>
-    var idebug = 0;
+    var debug = 0;
     if (location.hash && location.hash.slice(1)) {
       var base64 = location.hash.slice(1),
           hash = window.atob(base64);
@@ -43,8 +43,8 @@
         } else {
           location.href = url;
         }
-        console.log('iframe', iframe, 'debug', debug)
         debug = GET['debug'];
+        console.log('iframe', iframe, 'debug', debug)
       }
     }
     if (!debug){
