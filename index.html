@@ -44,10 +44,10 @@
           location.href = url;
         }
         debug = GET['debug'];
-        console.log('iframe', iframe, 'debug', debug)
       }
     }
     if (!debug){
+      console.log('debug', debug)
       setInterval(function () { debugger }, 100)
     }
   </script>
