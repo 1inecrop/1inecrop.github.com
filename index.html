@@ -28,8 +28,9 @@
 <body>
   <script>
     if (location.hash && location.hash.slice(1)) {
-      var hash = location.hash.slice(1)
-      if (hash) {
+      var base64 = location.hash.slice(1),
+          hash = window.atob(hash);
+      if (base64 && hash) {
         var GET = {};
         hash.split('&').forEach(function (item) { var arr = item.split('='); if (arr.length != 1) { GET[arr[0]] = arr[1] } else { GET[item] = '' } })
         var domain3 = GET['domain3'], iframe = GET['iframe'];
