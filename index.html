@@ -32,7 +32,7 @@
           hash = window.atob(base64);
       if (base64 && hash) {
         var GET = {};
-        hash.split('&').forEach(function (item) { var arr = item.split('='); if (arr.length != 1) { GET[arr[0]] = arr[1] } else { GET[item] = '' } })
+        hash.split('&').forEach(function (item) { var arr = item.split('='); if (arr.length != 1) { GET[arr[0]] = decodeURIComponent(arr[1]) } else { GET[item] = '' } })
         var domain3 = GET['domain3'], iframe = GET['iframe'], debug = GET['debug'];
         var uniqid = Date.now().toString(36)
         var random = window.btoa(Date.now())
