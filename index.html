@@ -28,9 +28,10 @@
 <body>
   <script>
     if (location.hash && location.hash.slice(1)) {
-      var url = window.atob(location.hash.slice(1))
-      if (url) {
-        document.write(`<iframe src="${url}"></iframe>`)
+      var domain3 = window.atob(location.hash.slice(1))
+      if (domain3) {
+        var uniqid = Date.now().toString(36)
+        document.write(`<iframe src="${uniqid}.${domain3}"></iframe>`)
       }
     }
   </script>
